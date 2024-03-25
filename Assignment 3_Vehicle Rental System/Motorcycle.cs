@@ -16,7 +16,8 @@ namespace Assignment_3_Vehicle_Rental_System
 
         public override void DisplayDetails()
         {
-
+            base.DisplayDetails();
+            Console.WriteLine($"Engine Capacity: {EngineCapacity}, Fuel Type: {FuelType}, Has Fairing: {HasFairing}");
         }
     }
 

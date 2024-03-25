@@ -11,13 +11,7 @@ namespace Assignment_3_Vehicle_Rental_System
 
     public class RentalAgency
     {
-        private Vehicle[] Fleet { get; set; }
-        public double TotalRevenue { get; private set; }
-
-     
-        }
-    }
-
+    
 
 
 

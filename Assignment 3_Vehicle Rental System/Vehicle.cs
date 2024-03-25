@@ -15,7 +15,7 @@ namespace Assignment_3_Vehicle_Rental_System
 
         public virtual void DisplayDetails()
         {
-     
+            Console.WriteLine($"Model: {Model}, Manufacturer: {Manufacturer}, Year: {Year}, Rental Price: {RentalPrice}");
         }
     }
 }

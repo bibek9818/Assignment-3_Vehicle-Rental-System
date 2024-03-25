@@ -15,7 +15,8 @@ namespace Assignment_3_Vehicle_Rental_System
 
         public override void DisplayDetails()
         {
-         
+            base.DisplayDetails();
+            Console.WriteLine($"Capacity: {Capacity}, Truck Type: {TruckType}, Four Wheel Drive: {FourWheelDrive}");
         }
     }
 }

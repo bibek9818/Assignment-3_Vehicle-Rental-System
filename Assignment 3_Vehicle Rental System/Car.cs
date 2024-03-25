@@ -16,7 +16,8 @@ namespace Assignment_3_Vehicle_Rental_System
 
         public override void DisplayDetails()
         {
-          
+            base.DisplayDetails();
+            Console.WriteLine($"Seats: {Seats}, Engine Type: {EngineType}, Transmission: {Transmission}, Convertible: {Convertible}");
         }
     }
 
