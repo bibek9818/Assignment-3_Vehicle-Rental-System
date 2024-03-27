@@ -1,7 +1,7 @@
 ﻿using Assignment_3_Vehicle_Rental_System;
+
+
 using System;
-using System.Diagnostics;
-using System.Runtime.ConstrainedExecution;
 
 class Program
 {
@@ -11,11 +11,11 @@ class Program
 
         Car car = new Car
         {
-            Model = "Toyota Camry",
-            Manufacturer = "Toyota",
-            Year = 2022,
-            RentalPrice = 220,
-            Seats = 5,
+            Model = "Ford Explorer",
+            Manufacturer = "Ford",
+            Year = 2023,
+            RentalPrice = 500,
+            Seats = 7,
             EngineType = "V6",
             Transmission = "Automatic",
             Convertible = false
@@ -23,10 +23,10 @@ class Program
 
         Truck truck = new Truck
         {
-            Model = "Ford F-150",
-            Manufacturer = "Ford",
-            Year = 2020,
-            RentalPrice = 180,
+            Model = "Toyota Tundra",
+            Manufacturer = "Toyota",
+            Year = 2022,
+            RentalPrice = 600,
             Capacity = 4,
             TruckType = "Pickup",
             FourWheelDrive = true
@@ -34,11 +34,11 @@ class Program
 
         Motorcycle motorcycle = new Motorcycle
         {
-            Model = "Honda CBR500R",
-            Manufacturer = "Honda",
-            Year = 2019,
-            RentalPrice = 330,
-            EngineCapacity = 500,
+            Model = "Crossfire RM",
+            Manufacturer = "Crossfire",
+            Year = 2020,
+            RentalPrice = 300,
+            EngineCapacity = 250,
             FuelType = "Gasoline",
             HasFairing = true
         };
@@ -47,21 +47,26 @@ class Program
         agency.AddVehicle(truck);
         agency.AddVehicle(motorcycle);
 
-        Console.WriteLine("Details of vehicles in fleet:");
+        Console.WriteLine("****** Welcome to the Vehicle Rental Management System ******\n");
+
+        Console.WriteLine("Available Vehicles:");
+        Console.WriteLine("--------------------------------------");
         foreach (var vehicle in agency.GetFleet())
         {
             if (vehicle != null)
             {
                 vehicle.DisplayDetails();
+                Console.WriteLine("--------------------------------------");
             }
         }
 
-        agency.RentVehicle(car, 3);
-        agency.RentVehicle(truck, 5);
+        Console.WriteLine("\nRenting Vehicles:");
+        Console.WriteLine("--------------------------------------");
+        agency.RentVehicle(car, 2);
+        agency.RentVehicle(truck, 2);
         agency.RentVehicle(motorcycle, 2);
+        Console.WriteLine("--------------------------------------");
 
-        Console.WriteLine($"Total revenue: {agency.TotalRevenue}");
+        Console.WriteLine($"\nTotal revenue: ${agency.TotalRevenue}");
     }
 }
-
-
